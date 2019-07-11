@@ -36,9 +36,51 @@ Missionsspezifische Einstellungen (wärend der Lauftzeit - Missionsparameter):
 
 
 In dem Ordner "params" befindet sich eine Datei "params.hpp"
-
 Dort kann man bei jeder "class" anhand der
 
 default = ...;
 
-Werte einstellungen vornehmen, wie Sie zu Beginn der Mission voreingestellt sein soll.
+Werte Einstellungen vornehmen, wie Sie zu Beginn der Mission voreingestellt sein soll.
+
+zum Beispiel:
+
+class play_faction
+{
+  title = "Gegen welche Fraktion willst du spielen:";
+  texts[] = {"CSAT","CSAT Pazifik","FIA Red","AAF","FIA Green","Syndicat"};
+  values[] = {1,2,3,4,5,6};
+  default = 1; // mit diesem Wert können die Voreinstellungen der Mission geändert werden
+};
+
+hierbei muss man wissen, das "texts[]" die gleiche Anzahl von Einträgen wie "values[]" hat, die durch ein Komma getrennt sind!
+ Dabei steht der erste Wert von "texts[]" für den erste Wert in "values[]"
+
+ => "CSAT" = 1, "CSAT Pazifik" = 2, "FIA Red" = 3 usw.
+
+
+Noch ein Beispiel:
+
+class mission_difficulty
+{
+  title = "Schwierigkeitsgrad:";
+  texts[] = {"Easy","Normal","Hard","Ultra"};
+  values[] = {0,2,3,4};
+  default = 2;
+};
+
+=> "Easy" = 0, "Normal" = 2, "Hard"= 3, "Ultra" = 4
+
+Also wenn man in der Lobby die Parameter einstellt, so wird immer der dazugehörige Wert aus "Values[]" an das Script weitergegeben
+______________________________________________________________________________________________
+
+
+Kleine Template Features( in die Init des Objekts einfügen):
+
+Schnelles Reisen -
+
+this addAction ['<t color=''#f000ff00''>Schnelles Reisen</t>',{createDialog "MSOT_TRAVEL_TABLE";},(1),8,false,true,"","_this == player"];
+
+
+Arsenalbox -
+
+this addAction ['<t color=''#f000ff00''>Open Arsenal</t>',{[] spawn MSOT_arsenal_fnc_initArsenal},[],1.5,true,true,"","true",5];
