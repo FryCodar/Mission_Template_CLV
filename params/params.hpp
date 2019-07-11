@@ -7,7 +7,7 @@
   default = -99999;
   texts[] = {""};
   };
-
+  //Tageszeit anpassen
   class Daytime
   {
     title = "Time of Day:";
@@ -16,7 +16,7 @@
 		default = 10;
 		function = "BIS_fnc_paramDaytime";
   };
-
+  //Fraktion auswählen (nur bei Templateeigenen Spawnmethoden)
   class play_faction
   {
     title = "Gegen welche Fraktion willst du spielen:";
@@ -24,6 +24,7 @@
     values[] = {1,2,3,4,5,6};
     default = 1;
   };
+  //Schwierigkeitsstufe einstellen
   class mission_difficulty
   {
     title = "Schwierigkeitsgrad:";
@@ -31,6 +32,7 @@
     values[] = {0,2,3,4};
     default = 2;
   };
+  //Soll Intro abgespielt werden
   class play_intro
   {
     title = "Spiele Intro ab:";
@@ -39,6 +41,7 @@
     default = 1;
     isGlobal = 1;
   };
+  //Soll Musik wärend des Intros abgespielt werden
   class play_intro_music
   {
     title = "Spiele Intro Music ab:";
@@ -47,6 +50,7 @@
     default = 1;
     isGlobal = 1;
   };
+  //Soll bei Start die Ausrüstung weg genommen werden
   class start_with_nothing
   {
     title = "Starte ohne Ausrüstung:";
@@ -55,6 +59,7 @@
     default = 1;
     isGlobal = 1;
   };
+  // Soll der DEBUG MODUS angeschalten sein
   class debug_modus
   {
     title = "DEBUG MODUS:";
@@ -63,6 +68,7 @@
     default = 0;
     isGlobal = 1;
   };
+  // Wer soll Medic sein dürfen
   class who_is_medic
   {
       title = "Wer ist Sanitäter:";
@@ -71,4 +77,10 @@
       default = 1;
       isGlobal = 1;
   };
+
+  //Hier wird die ViewDistance eingestellt (dont Touch pls)
+  #define VIEW_DISTANCE_MIN 4000
+	#define VIEW_DISTANCE_MAX 12000
+  #define VIEW_DISTANCE_DEFAULT 8800
+	#include "\a3\Functions_F_Heli\Params\paramViewDistance.hpp"
 };
