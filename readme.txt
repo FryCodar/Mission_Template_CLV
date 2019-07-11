@@ -84,3 +84,8 @@ this addAction ['<t color=''#f000ff00''>Schnelles Reisen</t>',{createDialog "MSO
 Arsenalbox -
 
 this addAction ['<t color=''#f000ff00''>Open Arsenal</t>',{[] spawn MSOT_arsenal_fnc_initArsenal},[],1.5,true,true,"","true",5];
+
+
+Briefing Text -
+
+Bitte in der "briefing.sqf" den gewünschten Text zwischen den "" einfügen, dieser wird nach Start der Mission automatisch geladen
