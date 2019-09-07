@@ -78,9 +78,13 @@
       isGlobal = 1;
   };
 
-  //Hier wird die ViewDistance eingestellt (dont Touch pls)
-  #define VIEW_DISTANCE_MIN 4000
-	#define VIEW_DISTANCE_MAX 12000
-  #define VIEW_DISTANCE_DEFAULT 8800
-	#include "\a3\Functions_F_Heli\Params\paramViewDistance.hpp"
+ class ViewDistance
+ {
+		
+        title = "View distance";
+	values[] = {2000, 5000, 6000, 7000, 8000, 9000, 10000 };
+	texts[] = { "2000 m", "5000 m", "6000 m", "7000 m" ,"8000 m", "9000 m","10000 m"};
+	default = 9000;
+	isGlobal = 1;
+  };
 };

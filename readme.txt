@@ -78,7 +78,7 @@ Kleine Template Features( in die Init des Objekts einfügen):
 
 Schnelles Reisen -
 
-this addAction ['<t color=''#f000ff00''>Schnelles Reisen</t>',{createDialog "MSOT_TRAVEL_TABLE";},(1),8,false,true,"","_this == player"];
+  this addAction ['<t color=''#f000ff00''>Schnelles Reisen</t>',{createDialog "MSOT_TRAVEL_TABLE";},(1),8,false,true,"","_this == player"];
 
 
 Arsenalbox -
