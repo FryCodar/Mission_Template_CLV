@@ -35,7 +35,7 @@ MSOT_CAM_HEIGHT_START = 50; //default: 500
 MSOT_CAM_HEIGHT_PLAYER_END = 5; //default: 5
 
 //Individueller Kamera-Startpunkt: Name des StartMarkers
-MSOT_CAM_START_MARKER = "startmark"; // default: ""
+MSOT_CAM_START_MARKER = ""; // default: ""
 //-------------------------------------------------------------------------
 
 //Verliert seine Ausrüstung am Start der Mission: true - an / false - aus
