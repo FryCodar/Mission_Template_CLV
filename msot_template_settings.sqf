@@ -59,6 +59,6 @@ zBsp ARSENAL_BLACKLIST = ["B_UavTerminal","O_UavTerminal","I_UavTerminal","C_Uav
 this allowdamage false; this addAction ['<t color=''#f000ff00''>Schnelles Reisen</t>',{createDialog "MSOT_TRAVEL_TABLE";},[],1.5,true,true,"","true",5];
 */
 
-ARSENAL_BLACKLIST = ["ItemMap","ItemGPS"];
+ARSENAL_BLACKLIST = [];
 
 //**************************************************************************************************************************************************
