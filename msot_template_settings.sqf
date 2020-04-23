@@ -29,13 +29,13 @@ MSOT_INTRO_TIME = 25; //default: 25
 MSOT_CAM_DISTANCE = 10000; //default: 10000
 
 //Kamera Höhe über See Level bei Intro Start (in Meter)
-MSOT_CAM_HEIGHT_START = 500; //default: 500
+MSOT_CAM_HEIGHT_START = 50; //default: 500
 
 //Kamera Höhe über Spieler bei Intro Ende (in Meter)
 MSOT_CAM_HEIGHT_PLAYER_END = 5; //default: 5
 
 //Individueller Kamera-Startpunkt: Name des StartMarkers
-MSOT_CAM_START_MARKER = ""; // default: ""
+MSOT_CAM_START_MARKER = "startmark"; // default: ""
 //-------------------------------------------------------------------------
 
 //Verliert seine Ausrüstung am Start der Mission: true - an / false - aus
@@ -50,11 +50,15 @@ NEW_SETTING = ""; //default: ""
 Blacklist Arsenal - um diese Arsenalbox zu nutzen, musst du folgenden Befehl in die Init-Zeile der Box eintragen:
 
 this addAction ['<t color=''#f000ff00''>Open Arsenal</t>',{[] spawn MSOT_arsenal_fnc_initArsenal},[],1.5,true,true,"","true",5];
+this addAction ['<t color=''#f000ff00''>Open Arsenal</t>',{[player, player, true] call ace_arsenal_fnc_openBox},[],1.5,true,true,"","true",5];
 
 In die ARSENAL_BLACKLIST dann einfach die Classnames Eintragen die NICHT hinzugefügt werden sollen
 zBsp ARSENAL_BLACKLIST = ["B_UavTerminal","O_UavTerminal","I_UavTerminal","C_UavTerminal"];
+
+
+this allowdamage false; this addAction ['<t color=''#f000ff00''>Schnelles Reisen</t>',{createDialog "MSOT_TRAVEL_TABLE";},[],1.5,true,true,"","true",5];
 */
 
-ARSENAL_BLACKLIST = [];
+ARSENAL_BLACKLIST = ["ItemMap","ItemGPS"];
 
 //**************************************************************************************************************************************************

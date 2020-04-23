@@ -26,9 +26,10 @@ If(isServer)then
 };
 If(hasInterface)then
 {
+	//setViewDistance 5000;
 	player disableConversation true;
 };
-setViewDistance (["ViewDistance",5000] call BIS_fnc_getParamValue);
+setViewDistance (["View_Distance",5000] call BIS_fnc_getParamValue);
 enableSaving [ false, false ];
 
 

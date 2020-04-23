@@ -7,7 +7,7 @@
   default = -99999;
   texts[] = {""};
   };
-  //Tageszeit anpassen
+
   class Daytime
   {
     title = "Time of Day:";
@@ -16,7 +16,7 @@
 		default = 10;
 		function = "BIS_fnc_paramDaytime";
   };
-  //Fraktion auswählen (nur bei Templateeigenen Spawnmethoden)
+
   class play_faction
   {
     title = "Gegen welche Fraktion willst du spielen:";
@@ -24,7 +24,6 @@
     values[] = {1,2,3,4,5,6};
     default = 1;
   };
-  //Schwierigkeitsstufe einstellen
   class mission_difficulty
   {
     title = "Schwierigkeitsgrad:";
@@ -32,7 +31,6 @@
     values[] = {0,2,3,4};
     default = 2;
   };
-  //Soll Intro abgespielt werden
   class play_intro
   {
     title = "Spiele Intro ab:";
@@ -41,7 +39,6 @@
     default = 1;
     isGlobal = 1;
   };
-  //Soll Musik wärend des Intros abgespielt werden
   class play_intro_music
   {
     title = "Spiele Intro Music ab:";
@@ -50,7 +47,6 @@
     default = 1;
     isGlobal = 1;
   };
-  //Soll bei Start die Ausrüstung weg genommen werden
   class start_with_nothing
   {
     title = "Starte ohne Ausrüstung:";
@@ -59,7 +55,6 @@
     default = 1;
     isGlobal = 1;
   };
-  // Soll der DEBUG MODUS angeschalten sein
   class debug_modus
   {
     title = "DEBUG MODUS:";
@@ -68,7 +63,6 @@
     default = 0;
     isGlobal = 1;
   };
-  // Wer soll Medic sein dürfen
   class who_is_medic
   {
       title = "Wer ist Sanitäter:";
@@ -77,14 +71,13 @@
       default = 1;
       isGlobal = 1;
   };
+  class View_Distance
+  {
 
- class ViewDistance
- {
-		
         title = "View distance";
-	values[] = {2000, 5000, 6000, 7000, 8000, 9000, 10000 };
-	texts[] = { "2000 m", "5000 m", "6000 m", "7000 m" ,"8000 m", "9000 m","10000 m"};
-	default = 9000;
-	isGlobal = 1;
+	      values[] = {2000, 5000, 6000, 7000, 8000, 9000, 10000 };
+	      texts[] = { "2000 m", "5000 m", "6000 m", "7000 m" ,"8000 m", "9000 m","10000 m"};
+	      default = 9000;
+	      isGlobal = 1;
   };
 };
