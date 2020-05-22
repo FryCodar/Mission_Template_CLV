@@ -14,7 +14,7 @@ switch(_idx)do
 
             _task_description_long = "Hello";
 
-            _task_description_forHUD = "ich da";
+            _task_description_forHUD = "";
 
             _task_Type  = "move";
 
