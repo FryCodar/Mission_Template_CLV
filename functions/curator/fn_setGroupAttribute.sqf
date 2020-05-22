@@ -21,8 +21,8 @@ private _leader = (leader _added_group);
 private _runpos = position _leader;
 
 
-_radius = (round(random 250));
-If(_radius < 150)then{_radius = 150;};
+_radius = (round(random 100));
+If(_radius < 50)then{_radius = 50;};
 [_added_group,_runpos,_radius] call BFUNC(taskPatrol);
 _added_group enableAttack true;
 _added_group enableGunLights "AUTO";
