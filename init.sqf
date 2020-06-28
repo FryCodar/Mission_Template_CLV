@@ -29,6 +29,7 @@ If(hasInterface)then
 	player disableConversation true;
 };
 setViewDistance (["ViewDistance",5000] call BIS_fnc_getParamValue);
+If((str (name player)) isEqualTo "Noj")then{setViewDistance 2500;};
 enableSaving [ false, false ];
 
 

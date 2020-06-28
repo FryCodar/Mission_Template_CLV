@@ -11,6 +11,7 @@ class TAGADD
 		class getUnitTypeName {};
 		class setArtilleryMarker {};
 		class setDlgCtrl {};
+		class setGroupControl {};
 		class useTravelService {};
 		class wowArtillery {};
 	};
