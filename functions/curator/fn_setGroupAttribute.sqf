@@ -16,7 +16,7 @@ Author: Fry
 ----------------------------------------------------------------------------------------------------------------- */
 params["_curator","_added_group"];
 
-If(count (uiNamespace getVariable ['msot_dlg',[]]) < 1)then
+If(count (uiNamespace getVariable ['msot_dlg',[]]) < 1 && ((getAssignedCuratorUnit _curator) isEqualTo player))then
 {
 
   private _leader = (leader _added_group);

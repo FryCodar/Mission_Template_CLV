@@ -42,7 +42,7 @@ If(_added_object isKindOf "AllVehicles")then
      private _add_info = [_set_Patrol,_runpos,_grp_name,_added_object];
      missionNamespace setVariable [STRVAR_DO(group_control_resources),_add_info,false];
      sleep 0.5;
-     If(count (uiNamespace getVariable ['msot_dlg',[]]) < 1)then
+     If(count (uiNamespace getVariable ['msot_dlg',[]]) < 1 && ((getAssignedCuratorUnit _curator) isEqualTo player))then
      {
        createDialog "MSOT_ZEUS_PATROL";
      };
